@@ -42,7 +42,7 @@ python generate_wordcloud.py input_file.txt --lang en --output output_wordcloud.
 This project is licensed under the MIT License - see the [LICENSE](https://chat.openai.com/c/LICENSE) file for details.
 
 ## Acknowledgments
-Ukrainian stop words provided by [skupriienko](https://raw.githubusercontent.com/skupriienko/Ukrainian-Stopwords/master)
+Ukrainian stop words provided by [skupriienko](https://github.com/skupriienko/Ukrainian-Stopwords)
 WordCloud library: https://github.com/amueller/word_cloud.
 pymorphy3 library: https://github.com/kmike/pymorphy2.
 
