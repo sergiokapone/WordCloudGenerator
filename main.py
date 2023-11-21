@@ -35,7 +35,7 @@ def read_text_from_file(file_path):
             text = file.read()
         return text
     except FileNotFoundError:
-        print(f"Файл {file_path} не найден.")
+        print(f"File {file_path} not found.")
         return None
 
 
@@ -80,8 +80,16 @@ def generate_wordcloud(freq_dist, output_file, show_image=False):
 
 
 def generate_wordcloud_from_file(input_file, output_file, lang="en", show_image=False):
-    download_stopwords()
-    stop_words = set(stopwords.words("ukrainian"))
+    match lang:
+        case "uk":
+            download_stopwords()
+            lang_wide = "ukrainian"
+        case "ru":
+            lang_wide = "russian"
+        case _:
+            lang_wide = "english"
+
+    stop_words = set(stopwords.words(lang_wide))
 
     morph = MorphAnalyzer(lang=lang)
 
